@@ -3,13 +3,15 @@
     <div class="container h-100">
       <div class="d-flex align-items-center h-100 justify-content-between">
         <div class="d-flex h-100 align-items-center">
-          <img class="logo" src="../assets/images/logo.svg" alt="">
+          <router-link :to="{ name: 'Main' }">
+            <img class="logo" src="../assets/images/logo.svg" alt="">
+          </router-link>
           <div class="navigation">
-            <a href="#">About Thai IT</a>
-            <a href="#">IT infrastructure</a>
-            <a href="#">Electronic Components</a>
-            <a href="#">Professional Services</a>
-            <a href="#">Contact Us</a>
+            <router-link :to="{ name: 'About' }">About Thai IT</router-link>
+            <router-link :to="{ name: 'Infrastructure' }">IT infrastructure</router-link>
+            <router-link :to="{ name: 'Components' }">Electronic Components</router-link>
+            <router-link :to="{ name: 'Services' }">Professional Services</router-link>
+            <router-link :to="{ name: 'Contacts' }">Contact Us</router-link>
           </div>
         </div>
         <div class="contacts d-flex flex-column align-items-end justify-content-center">

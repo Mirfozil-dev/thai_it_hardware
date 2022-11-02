@@ -1,22 +1,37 @@
 <template>
-  <div class="slider_wrapper" :style="{ width, height }">
-    <img class="slide_img" src="../assets/images/image_1.jpg" alt="">
+  <div
+    class="slider_wrapper"
+    :style="{ width, height }"
+    v-touch:swipe.left="nextSlide"
+    v-touch:swipe.right="lastSlide"
+  >
+    <img
+      v-for="(slide, index) in slides"
+      :key="index"
+      class="slide_img"
+      :style="{opacity: activeIndex === index ? '1': '0'}"
+      :src="slide.img"
+      alt=""
+    >
     <div class="slide_body w-100 d-flex flex-column align-items-center">
       <div class="d-flex justify-content-between w-100 align-items-center">
         <h1 class="slide_title">
-          {{ slides[0].title }}
+          {{ slides[activeIndex].title || '' }}
         </h1>
         <button class="slide_more_btn">
-          <a :href="slides[0].link">
+          <a :href="slides[activeIndex].link || '#'">
             more
           </a>
         </button>
       </div>
       <div class="slide_pagination">
-        <span class="slide_dot active" />
-        <span class="slide_dot" />
-        <span class="slide_dot" />
-        <span class="slide_dot" />
+        <span
+          v-for="(item, index) in slides"
+          :key="index"
+          class="slide_dot"
+          :class="index === activeIndex && 'active'"
+          @click="changeSlide(index)"
+        />
       </div>
     </div>
   </div>
@@ -25,7 +40,23 @@
 <script>
 export default {
   name: 'Slider',
-  props: ['width', 'height', 'slides']
+  props: ['width', 'height', 'slides'],
+  data () {
+    return {
+      activeIndex: 0
+    }
+  },
+  methods: {
+    changeSlide (index) {
+      this.activeIndex = index
+    },
+    nextSlide () {
+      this.activeIndex < this.slides.length - 1 ? this.activeIndex += 1 : this.activeIndex = 0
+    },
+    lastSlide () {
+      this.activeIndex > 0 ? this.activeIndex -= 1 : this.activeIndex = (this.slides.length - 1)
+    }
+  }
 }
 </script>
 
@@ -62,6 +93,8 @@ export default {
   overflow: hidden;
   z-index: -1;
   border-radius: 6px;
+  position: absolute;
+  transition: 0.3s opacity;
 }
 
 .slide_body {
@@ -82,6 +115,7 @@ export default {
   height: 14px;
   background: #969696;
   border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
 .slide_dot.active {
@@ -102,6 +136,7 @@ export default {
   width: 150px;
   height: 40px;
 }
+
 .slide_more_btn a {
   text-decoration: none;
   color: #ffffff;
