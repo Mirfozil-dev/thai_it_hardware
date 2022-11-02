@@ -1,11 +1,10 @@
 <template>
   <div class="container">
     <Slider
-      width="100%" height="450px"
       style="margin-top: 20px;"
       :slides="slides"
     />
-    <Paragraph margin="40px 0 0 0">
+    <Paragraph margin="40px 0 0 0" class="main_paragraph">
       Thai IT Hardware specializes in technological and IT-related services, we are a professional IT solutions
       provider. Portfolio of our IT solutions covers many industries, focusing mainly on Industrial, Automation and
       Telecommunication. We have qualified staff in different fields of IT and industries, we can provide various kinds
@@ -61,4 +60,30 @@ export default {
   margin: 70px 0 40px 0;
 }
 
+</style>
+
+<style>
+@media screen and (max-width: 1200px) {
+  .main_paragraph {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main_paragraph {
+    font-size: 18px !important;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_paragraph {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+
+  .competencies_title {
+    font-size: 26px !important;
+  }
+}
 </style>

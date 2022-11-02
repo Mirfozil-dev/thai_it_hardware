@@ -1,7 +1,6 @@
 <template>
   <div
     class="slider_wrapper"
-    :style="{ width, height }"
     v-touch:swipe.left="nextSlide"
     v-touch:swipe.right="lastSlide"
   >
@@ -62,6 +61,8 @@ export default {
 
 <style scoped>
 .slider_wrapper {
+  width: 100%;
+  height: 450px;
   position: relative;
 }
 
@@ -89,7 +90,7 @@ export default {
 .slide_img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
   overflow: hidden;
   z-index: -1;
   border-radius: 6px;
@@ -144,5 +145,77 @@ export default {
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
+}
+
+@media screen and (max-width: 1200px) {
+  .slide_title {
+    font-size: 30px !important;
+  }
+  .slide_more_btn {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .slide_title {
+    font-size: 26px !important;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide_title {
+    font-size: 22px !important;
+  }
+
+  .slide_more_btn {
+    width: 50px;
+    height: 30px;
+  }
+
+  .slide_more_btn a {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .slide_dot {
+    width: 12px;
+    height: 12px;
+  }
+  .slide_body {
+    padding: 0 20px;
+    bottom: 15px;
+  }
+
+  .slider_wrapper {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 446px) {
+  .slide_dot {
+    width: 8px;
+    height: 8px;
+  }
+  .slide_title {
+    font-size: 16px !important;
+    line-height: 16px;
+  }
+
+  .slide_more_btn {
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+
+  .slide_more_btn a {
+    font-size: 8px;
+  }
+  .slide_pagination {
+    margin-top: 16px !important;
+  }
+  .slider_wrapper {
+    height: 250px;
+  }
 }
 </style>

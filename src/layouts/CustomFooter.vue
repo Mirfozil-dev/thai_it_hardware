@@ -9,11 +9,11 @@
           </p>
         </div>
         <div class="contacts d-flex flex-column align-items-end justify-content-center">
-          <a href="tel:0928400535" class="d-flex align-items-center">
+          <a href="tel:0928400535" class="d-flex align-items-center justify-content-end text-end">
             <img src="../assets/images/phone.svg" alt="">
             092-840-05-35
           </a>
-          <a href="mailto:d.makh@thai-it-hardware.co.th" class="d-flex align-items-center">
+          <a href="mailto:d.makh@thai-it-hardware.co.th" class="d-flex align-items-center justify-content-end text-end">
             <img src="../assets/images/email.svg" alt="">
             d.makh@thai-it-hardware.co.th
           </a>
@@ -63,5 +63,46 @@ export default {
 
 .footer_wrapper .contacts img {
   margin: 0 12px 2px 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer_wrapper .logo {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer_wrapper .logo {
+    width: 150px;
+  }
+
+  .footer_body p {
+    font-size: 10px;
+  }
+
+  .footer_wrapper .contacts a {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .footer_wrapper .contacts img {
+    width: 10px;
+    margin: 0 6px 2px 0;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .footer_wrapper .logo {
+    width: 100px;
+  }
+
+  .footer_body p {
+    font-size: 8px;
+    margin: 0 0 0 10px;
+  }
+
+  .footer_wrapper .contacts a {
+    font-size: 6px;
+  }
 }
 </style>
