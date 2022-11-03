@@ -86,7 +86,7 @@ export default {
 
 @media screen and (max-width: 575px) {
   .competencies_item p {
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 12px !important;
   }
 
@@ -96,6 +96,10 @@ export default {
 
   .competencies_item {
     width: 23% !important;
+  }
+
+  .competencies_item img {
+    width: 80% !important;
   }
 }
 

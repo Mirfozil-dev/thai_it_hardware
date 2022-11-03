@@ -12,41 +12,41 @@
     </Paragraph>
     <h6 class="competencies_title">Our competencies</h6>
     <CompetenciesSection />
-    <ComponentsSection style="margin: 81px 0 85px 0;" />
+    <ComponentsSection class="components_wrapper" />
   </div>
 </template>
 
 <script>
-import Slider from '../components/Slider.vue'
-import CompetenciesSection from '../components/CompetenciesSection.vue'
-import ComponentsSection from '../components/ComponentsSection.vue'
-import Paragraph from '../components/Paragraph.vue'
+import Slider from '../components/Slider.vue';
+import CompetenciesSection from '../components/CompetenciesSection.vue';
+import ComponentsSection from '../components/ComponentsSection.vue';
+import Paragraph from '../components/Paragraph.vue';
 
 export default {
   name: 'Main',
   components: { Paragraph, ComponentsSection, CompetenciesSection, Slider },
-  data () {
+  data() {
     return {
       slides: [
         {
           title: 'Electronic Components Procurement Service',
           img: require('../assets/images/main_slider_img1.jpg'),
-          link: '#'
+          link: '#',
         },
         {
           title: 'Maintenance of IT infrastructure',
           img: require('../assets/images/main_slider_img2.jpg'),
-          link: '#'
+          link: '#',
         },
         {
           title: 'Professional Services',
           img: require('../assets/images/main_slider_img3.jpg'),
-          link: '#'
-        }
-      ]
-    }
-  }
-}
+          link: '#',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -60,6 +60,15 @@ export default {
   margin: 70px 0 40px 0;
 }
 
+.components_wrapper {
+  margin: 81px 0 85px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .components_wrapper {
+    margin: 61px 0 65px 0 !important;
+  }
+}
 </style>
 
 <style>
@@ -71,6 +80,7 @@ export default {
 
 @media screen and (max-width: 992px) {
   .main_paragraph {
+    margin-top: 30px !important;
     font-size: 18px !important;
 
   }
@@ -78,12 +88,26 @@ export default {
 
 @media screen and (max-width: 768px) {
   .main_paragraph {
+    margin-top: 20px !important;
     font-size: 16px !important;
     line-height: 20px !important;
   }
 
   .competencies_title {
     font-size: 26px !important;
+    margin: 50px 0 30px 0 !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main_paragraph {
+    margin-top: 15px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+
+  .competencies_title {
+    font-size: 24px !important;
   }
 }
 </style>

@@ -93,7 +93,7 @@ export default {
 
 @media screen and (max-width: 510px) {
   .footer_wrapper .logo {
-    width: 100px;
+    width: 120px;
   }
 
   .footer_body p {
@@ -103,6 +103,11 @@ export default {
 
   .footer_wrapper .contacts a {
     font-size: 6px;
+  }
+
+  .footer_wrapper .contacts img {
+    width: 8px;
+    margin: 0 4px 0 0;
   }
 }
 </style>

@@ -84,7 +84,8 @@ export default {
   font-weight: 600;
   font-size: 38px;
   line-height: 57px;
-  color: #FFFFFF
+  color: #FFFFFF;
+  margin: 0;
 }
 
 .slide_img {
@@ -102,7 +103,7 @@ export default {
   position: absolute;
   padding: 0 40px;
   bottom: 20px;
-  z-index: 999;
+  z-index: 1;
 }
 
 .slide_pagination {
@@ -197,19 +198,18 @@ export default {
     height: 8px;
   }
   .slide_title {
-    font-size: 16px !important;
+    font-size: 20px !important;
     line-height: 16px;
   }
 
   .slide_more_btn {
-    width: 30px;
     height: 20px;
     border-radius: 4px;
     margin-left: 5px;
   }
 
   .slide_more_btn a {
-    font-size: 8px;
+    font-size: 10px;
   }
   .slide_pagination {
     margin-top: 16px !important;
