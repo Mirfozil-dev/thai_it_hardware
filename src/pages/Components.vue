@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <ComponentsSection style="margin: 20px 0 40px 0;" />
-    <Paragraph margin="0 0 56px 0">In a time of Global Chip Shortage, sourcing market stocks becomes crucially important
+    <Paragraph class="components_paragraph" margin="0 0 56px 0">In a time of Global Chip Shortage, sourcing market
+      stocks becomes crucially important
       to avoid closedown of our
       customers. We do sourcing services at US, European and Asian markets.<br>
       *Active components<br>
@@ -23,3 +24,32 @@ export default {
   components: { Paragraph, ComponentsSection }
 }
 </script>
+
+<style>
+@media screen and (max-width: 1200px) {
+  .components_paragraph {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .components_paragraph {
+    font-size: 18px !important;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .components_paragraph {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .components_paragraph {
+    font-size: 14px !important;
+    line-height: 18px !important;
+  }
+}
+</style>

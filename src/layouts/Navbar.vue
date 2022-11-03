@@ -6,8 +6,10 @@
       </router-link>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav class="bg-white" style="z-index: 2;">
-        <NavLinks />
-        <ContactsSection />
+        <b-navbar-nav class="w-100 container">
+          <NavLinks />
+          <ContactsSection />
+        </b-navbar-nav>
       </b-collapse>
     </div>
   </b-navbar>
@@ -39,7 +41,24 @@ export default {
 @media screen and (max-width: 992px) {
   .navbar-collapse.collapse {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    margin-top: 42px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+  }
+
+  .navbar_wrapper {
+    height: 70px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar_wrapper {
+    height: 60px !important;
+  }
+
+  .navbar-collapse.collapse {
+    top: 60px;
   }
 }
 </style>

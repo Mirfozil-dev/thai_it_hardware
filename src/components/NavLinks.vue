@@ -20,8 +20,8 @@
 
 <script>
 export default {
-  name: 'NavLinks'
-}
+  name: 'NavLinks',
+};
 </script>
 
 <style scoped>
