@@ -4,28 +4,22 @@
       <div class="d-flex align-items-center h-100 justify-content-between">
         <div class="footer_body d-flex align-items-center h-100">
           <img class="logo" src="../assets/images/logo.svg" alt="">
-          <p>
+          <p class="text-center">
             Thai IT equipment. All rights reserved.
           </p>
         </div>
-        <div class="contacts d-flex flex-column align-items-end justify-content-center">
-          <a href="tel:0928400535" class="d-flex align-items-center justify-content-end text-end">
-            <img src="../assets/images/phone.svg" alt="">
-            092-840-05-35
-          </a>
-          <a href="mailto:d.makh@thai-it-hardware.co.th" class="d-flex align-items-center justify-content-end text-end">
-            <img src="../assets/images/email.svg" alt="">
-            d.makh@thai-it-hardware.co.th
-          </a>
-        </div>
+        <ContactsSection />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ContactsSection from '../components/ContactsSection.vue'
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  components: { ContactsSection }
 }
 </script>
 
@@ -89,6 +83,10 @@ export default {
     width: 10px;
     margin: 0 6px 2px 0;
   }
+
+  .footer_wrapper {
+    height: 100px;
+  }
 }
 
 @media screen and (max-width: 510px) {
@@ -108,6 +106,10 @@ export default {
   .footer_wrapper .contacts img {
     width: 8px;
     margin: 0 4px 0 0;
+  }
+
+  .footer_wrapper {
+    height: 80px;
   }
 }
 </style>

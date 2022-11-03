@@ -29,6 +29,7 @@ export default {
   font-weight: 500;
   font-size: 10px;
   line-height: 20px;
+  white-space: nowrap;
 }
 
 .contacts {
@@ -47,6 +48,18 @@ export default {
 
   .contacts a {
     font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts a {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .contacts img {
+    width: 10px;
+    margin: 0 6px 2px 0;
   }
 }
 
