@@ -24,8 +24,11 @@ export default {
 
 <style scoped>
 .contacts a {
-  color: #333333;
   text-decoration: none;
+}
+
+.contacts a p {
+  color: #333333;
   font-weight: 500;
   font-size: 10px;
   line-height: 20px;
@@ -60,6 +63,22 @@ export default {
   .contacts img {
     width: 10px;
     margin: 0 6px 2px 0;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .contacts a {
+    margin-bottom: 5px !important;
+  }
+
+  .contacts a p {
+    font-size: 7px !important;
+    line-height: 8px !important;
+  }
+
+  .contacts img {
+    width: 8px;
+    margin: 0 6px 0 0;
   }
 }
 
