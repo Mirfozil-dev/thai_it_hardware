@@ -6,11 +6,11 @@
         092-840-05-35
       </p>
     </a>
-    <a href="mailto:d.makh@thai-it-hardware.co.th"
+    <a href="mailto:sale@thai-it-hardware.co.th"
        class="d-flex align-items-center text-end justify-content-end">
       <img src="../assets/images/email.svg" alt="">
       <p class="m-0">
-        d.makh@thai-it-hardware.co.th
+        sale@thai-it-hardware.co.th
       </p>
     </a>
   </b-navbar-nav>

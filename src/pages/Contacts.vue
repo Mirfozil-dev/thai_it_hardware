@@ -18,12 +18,12 @@
         </a>
         <a
           style="margin-top: 20px;"
-          href="mailto:d.makh@thai-it-hardware.co.th"
+          href="mailto:sale@thai-it-hardware.co.th"
           class="d-flex align-items-center"
         >
           <img style="width: 22px;" src="../assets/images/email.svg" alt="">
           <Paragraph class="contacts_paragraph" margin="0 0 0 12px" fontSize="20px" lineHeight="20px">
-            d.makh@thai-it-hardware.co.th
+            sale@thai-it-hardware.co.th
           </Paragraph>
         </a>
       </div>
