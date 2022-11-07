@@ -3,7 +3,7 @@
     <div class="contacts_wrapper">
       <div class="contact_block">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905609.5993273803!2d99.39440532511728!3d13.460369172022054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42fb361e712de0e7!2zMTLCsDU0JzE4LjQiTiAxMDDCsDUyJzIxLjgiRQ!5e0!3m2!1sru!2sro!4v1667373555984!5m2!1sru!2sro"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905609.5993273803!2d99.39440532511728!3d13.460369172022054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42fb361e712de0e7!2zMTLCsDU0JzE4LjQiTiAxMDDCsDUyJzIxLjgiRQ!5e0!3m2!1sru!2sro!4v1667373555984!5m2!1sen!2sro"
           class="contacts_map" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
@@ -32,12 +32,12 @@
 </template>
 
 <script>
-import Paragraph from '../components/Paragraph.vue'
+import Paragraph from '../components/Paragraph.vue';
 
 export default {
   name: 'Contacts',
-  components: { Paragraph }
-}
+  components: { Paragraph },
+};
 </script>
 
 <style scoped>
