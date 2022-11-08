@@ -16,13 +16,13 @@
 </template>
 
 <script>
-import NavLinks from '../components/NavLinks.vue'
-import ContactsSection from '../components/ContactsSection.vue'
+import NavLinks from '../components/NavLinks.vue';
+import ContactsSection from '../components/ContactsSection.vue';
 
 export default {
   name: 'Navbar',
-  components: { ContactsSection, NavLinks }
-}
+  components: { ContactsSection, NavLinks },
+};
 </script>
 
 <style scoped>

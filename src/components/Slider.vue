@@ -131,7 +131,7 @@ export default {
   align-items: center;
   padding: 4px 0;
   gap: 10px;
-  background: #439B24;
+  background: #215AA7;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   border: none;
