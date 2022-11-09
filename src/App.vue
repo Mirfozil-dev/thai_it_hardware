@@ -1,19 +1,21 @@
 <template>
   <div id="app">
     <Navbar />
-    <router-view />
+    <transition name="fade" mode="out-in" appear>
+      <router-view />
+    </transition>
     <CustomFooter />
   </div>
 </template>
 
 <script>
-import Navbar from './layouts/Navbar.vue'
-import CustomFooter from './layouts/CustomFooter.vue'
+import Navbar from './layouts/Navbar.vue';
+import CustomFooter from './layouts/CustomFooter.vue';
 
 export default {
   name: 'App',
-  components: { CustomFooter, Navbar }
-}
+  components: { CustomFooter, Navbar },
+};
 </script>
 <style>
 
@@ -22,6 +24,14 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-style: normal;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0;
 }
 
 </style>

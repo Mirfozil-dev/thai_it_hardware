@@ -31,17 +31,17 @@ export default {
         {
           title: 'Electronic Components Procurement Service',
           img: require('../assets/images/main_slider_img1.jpg'),
-          link: '#',
+          link: { name: 'Components' },
         },
         {
           title: 'Maintenance of IT infrastructure',
           img: require('../assets/images/main_slider_img2.jpg'),
-          link: '#',
+          link: { name: 'Infrastructure' },
         },
         {
           title: 'Professional Services',
           img: require('../assets/images/main_slider_img3.jpg'),
-          link: '#',
+          link: { name: 'Services' },
         },
       ],
     };

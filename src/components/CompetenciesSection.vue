@@ -22,7 +22,8 @@
     <div class="competencies_item d-flex flex-column align-items-center">
       <img src="../assets/images/router.svg" alt="">
       <Paragraph class="text-center" fontWeight="600">
-        Network switches
+        Wireless Network
+        solutions
       </Paragraph>
     </div>
     <div class="competencies_item d-flex flex-column align-items-center">
@@ -35,12 +36,12 @@
 </template>
 
 <script>
-import Paragraph from './Paragraph.vue'
+import Paragraph from './Paragraph.vue';
 
 export default {
   name: 'CompetenciesSection',
-  components: { Paragraph }
-}
+  components: { Paragraph },
+};
 </script>
 
 <style scoped>
