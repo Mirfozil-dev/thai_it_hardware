@@ -2,10 +2,19 @@
   <div class="container">
     <div class="contacts_wrapper">
       <div class="contact_block">
+        <b-overlay
+          :show="loadingMap"
+          :variant="'white'"
+          :opacity="0.85"
+          :blur="'2px'"
+          rounded="sm"
+        >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905609.5993273803!2d99.39440532511728!3d13.460369172022054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42fb361e712de0e7!2zMTLCsDU0JzE4LjQiTiAxMDDCsDUyJzIxLjgiRQ!5e0!3m2!1sru!2sro!4v1667373555984!5m2!1sen!2sro"
+          ref="contact_map"
+          :src="mapSrc"
           class="contacts_map" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          referrerpolicy="no-referrer-when-downgrade" />
+        </b-overlay>
       </div>
       <div class="contact_block">
         <Paragraph class="contacts_paragraph" margin="0 0 42px 0">
@@ -37,6 +46,24 @@ import Paragraph from '../components/Paragraph.vue';
 export default {
   name: 'Contacts',
   components: { Paragraph },
+  data() {
+    return {
+      loadingMap: false
+    }
+  },
+  computed: {
+    mapSrc() {
+      return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905609.5993273803!2d99.39440532511728!3d13.
+      460369172022054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x42fb361e712de0e7!2zMTLCsDU0JzE4
+      LjQiTiAxMDDCsDUyJzIxLjgiRQ!5e0!3m2!1sru!2sro!4v1667373555984!5m2!1s${this.$i18n.locale}!2sro`;
+    },
+  },
+  mounted() {
+    this.loadingMap = true
+    this.$refs.contact_map.onload = () => {
+      this.loadingMap = false
+    }
+  }
 };
 </script>
 

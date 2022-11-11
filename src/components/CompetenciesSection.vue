@@ -3,33 +3,32 @@
     <div class="competencies_item d-flex flex-column align-items-center">
       <img src="../assets/images/hub.svg" alt="">
       <Paragraph class="text-center" fontWeight="600">
-        Network switches
+        {{ $t('main.networkSwitches') }}
       </Paragraph>
     </div>
     <div class="competencies_item d-flex flex-column align-items-center">
       <img src="../assets/images/supply.svg" alt="">
       <Paragraph class="text-center" fontWeight="600">
-        Uninterruptible Power Supply
+        {{ $t('main.powerSupply') }}
       </Paragraph>
     </div>
     <div class="competencies_item d-flex flex-column align-items-center">
       <img src="../assets/images/laptop.svg" alt="">
       <Paragraph class="text-center" fontWeight="600">
-        Workstations
+        {{ $t('main.workstations') }}
       </Paragraph>
       <p class="text-center"></p>
     </div>
     <div class="competencies_item d-flex flex-column align-items-center">
       <img src="../assets/images/router.svg" alt="">
       <Paragraph class="text-center" fontWeight="600">
-        Wireless Network
-        solutions
+        {{ $t('main.serverEquipment') }}
       </Paragraph>
     </div>
     <div class="competencies_item d-flex flex-column align-items-center">
       <img src="../assets/images/server.svg" alt="">
       <Paragraph class="text-center" fontWeight="600">
-        Server Equipment
+        {{ $t('main.wirelessSolutions') }}
       </Paragraph>
     </div>
   </div>

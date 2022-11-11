@@ -2,21 +2,20 @@
   <div class="container" style="margin-top: 40px;">
     <CompetenciesSection />
     <Paragraph class="infrastructure_paragraph" margin="60px 0 0 0">
-      Currently Thai IT can supply and maintain all types of electronic devices such as computers, laptops,
-      workstations, servers and server equipment, UPS, wireless network devices and many more.
+      {{ $t('infrastructure.paragraph') }}
     </Paragraph>
     <img class="infrastructure_img" src="../assets/images/infrastructure_img.jpg" alt="">
   </div>
 </template>
 
 <script>
-import CompetenciesSection from '../components/CompetenciesSection.vue'
-import Paragraph from '../components/Paragraph.vue'
+import CompetenciesSection from '../components/CompetenciesSection.vue';
+import Paragraph from '../components/Paragraph.vue';
 
 export default {
   name: 'Infrastructure',
-  components: { Paragraph, CompetenciesSection }
-}
+  components: { Paragraph, CompetenciesSection },
+};
 </script>
 
 <style scoped>

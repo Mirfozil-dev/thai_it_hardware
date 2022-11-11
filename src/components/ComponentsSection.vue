@@ -3,28 +3,25 @@
     <div class="w-50">
       <img class="w-100" src="../assets/images/main_card_image1.jpg" alt="">
       <Paragraph margin="20px 0 0 0" class="components_p">
-        One of our core business lines is supplying our customers with high-quality service of Active & Passive
-        Electronic Components Procurement. Modern IT infrastructure uses a lot of high-tech electronic components,
-        such as chips, relays, power supplies, and we at Thai IT know our customers priority needs.
+        {{ $t('main.components_block1') }}
       </Paragraph>
     </div>
     <div class="w-50">
       <img class="w-100" src="../assets/images/main_card_image2.jpg" alt="">
       <Paragraph margin="20px 0 0 0" class="components_p">
-        Thai IT supply customers with variety of electronic components from different sources. We work with direct
-        factory lines from top-brand manufacturers, and also working with wide network of distributors.
+        {{ $t('main.components_block2') }}
       </Paragraph>
     </div>
   </div>
 </template>
 
 <script>
-import Paragraph from './Paragraph.vue'
+import Paragraph from './Paragraph.vue';
 
 export default {
   name: 'ComponentsSection',
-  components: { Paragraph }
-}
+  components: { Paragraph },
+};
 </script>
 
 <style scoped>

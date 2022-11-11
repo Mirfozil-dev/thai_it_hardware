@@ -5,12 +5,9 @@
       :slides="slides"
     />
     <Paragraph margin="40px 0 0 0" class="main_paragraph">
-      Thai IT Hardware specializes in technological and IT-related services, we are a professional IT solutions
-      provider. Portfolio of our IT solutions covers many industries, focusing mainly on Industrial, Automation and
-      Telecommunication. We have qualified staff in different fields of IT and industries, we can provide various kinds
-      of professional services to fit each customer requirements.
+      {{ $t('main.main_paragraph') }}
     </Paragraph>
-    <h6 class="competencies_title">Our competencies</h6>
+    <h6 class="competencies_title">{{ $t('main.competencies_title') }}</h6>
     <CompetenciesSection />
     <ComponentsSection class="components_wrapper" />
   </div>
@@ -25,26 +22,29 @@ import Paragraph from '../components/Paragraph.vue';
 export default {
   name: 'Main',
   components: { Paragraph, ComponentsSection, CompetenciesSection, Slider },
-  data() {
-    return {
-      slides: [
+  computed: {
+    slides() {
+      return [
         {
-          title: 'Electronic Components Procurement Service',
+          title: this.$t('main.slide1'),
           img: require('../assets/images/main_slider_img1.jpg'),
           link: { name: 'Components' },
         },
         {
-          title: 'Maintenance of IT infrastructure',
+          title: this.$t('main.slide2'),
           img: require('../assets/images/main_slider_img2.jpg'),
           link: { name: 'Infrastructure' },
         },
         {
-          title: 'Professional Services',
+          title: this.$t('main.slide3'),
           img: require('../assets/images/main_slider_img3.jpg'),
           link: { name: 'Services' },
         },
-      ],
-    };
+      ]
+    }
+  },
+  mounted() {
+    this.$i18n.locale = 'en'
   },
 };
 </script>

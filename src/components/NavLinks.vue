@@ -74,10 +74,22 @@ export default {
   width: 105%;
 }
 
+@media screen and (max-width: 1400px) {
+  .navigation {
+    margin-left: 25px !important;
+    gap: 10px !important;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .navigation {
-    margin-left: 18px;
-    gap: 8px;
+    margin-left: 10px !important;
+    gap: 5px !important;
+  }
+
+  .navigation a {
+    font-size: 11px;
+    line-height: 18px;
   }
 }
 </style>

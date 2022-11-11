@@ -18,8 +18,8 @@
 
 <script>
 export default {
-  name: 'ContactsSection'
-}
+  name: 'ContactsSection',
+};
 </script>
 
 <style scoped>
