@@ -22,13 +22,13 @@
     <div class="competencies_item d-flex flex-column align-items-center">
       <img src="../assets/images/router.svg" alt="">
       <Paragraph class="text-center" fontWeight="600">
-        {{ $t('main.serverEquipment') }}
+        {{ $t('main.wirelessSolutions') }}
       </Paragraph>
     </div>
     <div class="competencies_item d-flex flex-column align-items-center">
       <img src="../assets/images/server.svg" alt="">
       <Paragraph class="text-center" fontWeight="600">
-        {{ $t('main.wirelessSolutions') }}
+        {{ $t('main.serverEquipment') }}
       </Paragraph>
     </div>
   </div>
