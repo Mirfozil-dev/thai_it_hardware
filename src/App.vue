@@ -31,6 +31,9 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.$set(this.$i18n, 'locale', 'th');
+  },
 };
 </script>
 <style>
